@@ -22,8 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/books")
 public class BookController {
 
-    @Autowired
-    private BookServices bookServices;
+    private final BookServices bookServices;
+
+    public BookController(BookServices bookServices) {
+        this.bookServices = bookServices;
+    }
 
     @GetMapping
     @LogExecutionTime
