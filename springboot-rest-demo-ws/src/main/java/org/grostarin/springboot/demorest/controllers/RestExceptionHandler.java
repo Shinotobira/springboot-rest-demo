@@ -25,11 +25,6 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         return handleExceptionInternal(ex, "Book not found", new HttpHeaders(), HttpStatus.NOT_FOUND, request);
     }
 
-    @ExceptionHandler(BannedBookException.class)
-    protected ResponseEntity<Object> handleBannedNotFound(Exception ex, WebRequest request) {
-        return handleExceptionInternal(ex, "This is banned", new HttpHeaders(), HttpStatus.NOT_FOUND, request);
-    }
-
     @ExceptionHandler({
       BookIdMismatchException.class,
       ConstraintViolationException.class,
