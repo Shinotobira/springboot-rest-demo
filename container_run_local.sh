@@ -1,3 +1,3 @@
-#!/bin/sh sh
+#!/bin/sh
 
 docker run -p 8080:8080 book:latest

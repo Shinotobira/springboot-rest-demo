@@ -1,4 +1,4 @@
-#!/bin/sh sh
+#!/bin/sh
 
 docker build -t book:latest .
 
